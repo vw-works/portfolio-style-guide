@@ -1,0 +1,32 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vw-works/portolio-style-guide.git"
+  },
+  "keywords": [
+    "npm",
+    "sass"
+  ],
+  "author": "VW",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vw-works/portolio-style-guide/issues"
+  },
+  "homepage": "https://github.com/vw-works/portolio-style-guide#readme",
+  "dependencies": {
+    "bourbon": "^6.0.0",
+    "node-sass": "^4.13.0"
+  },
+  "devDependencies": {
+    "eyeglass": "^2.4.1",
+    "node-bourbon": "^4.2.8"
+  }
+}
