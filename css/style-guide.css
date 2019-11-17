@@ -33,7 +33,7 @@ header {
 
 .cd-logo {
   /* logo box style */
-  background-color: #5f8ee4;
+  background-color: #19191a;
   width: 120px;
 }
 @media only screen and (min-width: 1024px) {
@@ -118,25 +118,27 @@ main > h1 {
 xTypography 
 
 -------------------------------- */
-h1, h2 {
-  font-family: "Open Sans", sans-serif;
-  color: #19191a;
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #111111;
 }
 
 h1 {
-  font-size: 2.4rem;
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 0 0 .4em;
+    font-size: 27px;
+		line-height: 26px;
+		letter-spacing: 1px;
+		margin-bottom: 20px;
+		font-weight: 400;
+		text-transform:uppercase;
 }
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 3.2rem;
+    font-size: 21px;
   }
 }
 @media only screen and (min-width: 1024px) {
   h1 {
-    font-size: 4rem;
+    font-size: 27px;
   }
 }
 
@@ -157,21 +159,36 @@ section > h2::before {
   color: silver;
 }
 
+h3 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+
 p {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  color: #58585b;
+  font-size: 13px;
+  color:#111111;
+  line-height: 22px;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 p a {
-  color: #5f8ee4;
+  color:#000;
   text-decoration: underline;
 }
-@media only screen and (min-width: 768px) {
+p a:hover {
+  color: #888888;
+  text-decoration: underline;
+}
+/* @media only screen and (min-width: 768px) {
   p {
     font-size: 1.6rem;
     line-height: 1.6;
   }
-}
+} */
 
 /* -------------------------------- 
 
@@ -179,22 +196,33 @@ xButtons
 
 -------------------------------- */
 .btn {
-  border: none;
-  box-shadow: none;
-  border-radius: .25em;
-  font-size: 1.4rem;
-  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
   color: #ffffff;
-  padding: .6em 2.2em;
-  cursor: pointer;
-  background: #5f8ee4;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  height: auto;
+  display: inline-block;
+  background-color: #242424;
+  border: 1px solid#242424;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0;
+  transition: background-color .25s ease-in-out, color .25s ease-in-out, border-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-color .25s ease-in-out;
 }
+
 .btn:focus {
   outline: none;
 }
 .no-touch .btn:hover {
-  background: #759de8;
+  background-color:#c7c7c7;
+  color:#242424;
+  border-color:#c7c7c7;
 }
+
 .btn.btn-success {
   background: #6fce72;
 }
@@ -202,25 +230,26 @@ xButtons
   background: #82d485;
 }
 .btn.btn-alert {
-  background: #e4655f;
+  background: #f2dede;
 }
 .no-touch .btn.btn-alert:hover {
-  background: #e87a75;
+  background: #ebccd1;
 }
 .btn.btn-outline {
-  color: #5f8ee4;
+  border: 1px solid #111111;
+  color: #111111;
   background: transparent;
-  box-shadow: inset 0 0 0 1px #5f8ee4;
+  transition: border-color, 0.25s, ease-in-out;
 }
 .no-touch .btn.btn-outline:hover {
-  color: #ffffff;
-  background: #5f8ee4;
+  color:#ffffff;
+  background-color:#111111;
 }
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .btn {
     font-size: 1.6rem;
   }
-}
+} */
 
 .cd-buttons .cd-box:nth-of-type(2) span {
   /* CSS class name color */
@@ -234,8 +263,8 @@ xIcons
 -------------------------------- */
 .cd-icons li {
   /* icons size */
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
 
 /* -------------------------------- 
@@ -244,10 +273,14 @@ xForm
 
 -------------------------------- */
 input[type=text], select {
-  border: 1px solid #e6e6e6;
-  border-radius: .25em;
+  border: 1px solid #eeeeee;
   background: #ffffff;
+  transition: border-color ease-in-out 0.25s;
+  font-size: 13px;
+  line-height: 17px;
+  height: 50px;
 }
+
 input[type=text]:focus, select:focus {
   outline: none;
 }
@@ -257,16 +290,16 @@ input[type=text] {
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
 }
 input[type=text].success {
-  border-color: #6fce72;
-  box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
+  border-color: #3c763d;
+  box-shadow: none;
 }
 input[type=text].alert {
-  border-color: #e4655f;
-  box-shadow: 0 0 6px rgba(228, 101, 95, 0.2);
+  border-color: #a94442;
+  box-shadow: none;
 }
-input[type=text]:focus {
-  border-color: #5f8ee4;
-  box-shadow: 0 0 6px rgba(95, 142, 228, 0.2);
+input[type=text]:focus, input[type=text]:hover {
+  border-color: #888888;
+  box-shadow: none;
 }
 
 input[type=radio],
@@ -442,6 +475,8 @@ header nav {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  max-width: 40%;
+  height: auto;
 }
 @media only screen and (min-width: 1600px) {
   .cd-logo {
@@ -825,34 +860,34 @@ section:nth-of-type(6) h2::before {
   padding: .6em 0;
 }
 .cd-colors li:nth-of-type(1) .cd-color-swatch {
-  background: #5f8ee4;
+  background: #111111;
 }
 .cd-colors li:nth-of-type(1) .cd-color-swatch::before {
-  background: #759de8;
+  background: #242424;
 }
 .cd-colors li:nth-of-type(1) .cd-color-swatch::after {
-  background: #497fe0;
+  background: #000000;
 }
 .cd-colors li:nth-of-type(2) .cd-color-swatch {
-  background: #19191a;
+  background: #888888;
 }
 .cd-colors li:nth-of-type(2) .cd-color-swatch::before {
-  background: #262627;
+  background: #C7C7C7;
 }
 .cd-colors li:nth-of-type(2) .cd-color-swatch::after {
-  background: #0d0d0d;
+  background: #707070;
 }
 .cd-colors li:nth-of-type(3) .cd-color-swatch {
-  background: #e4655f;
+  background: #f3f3f3;
 }
 .cd-colors li:nth-of-type(3) .cd-color-swatch::before {
-  background: #e87a75;
+  background: #ffffff;
 }
 .cd-colors li:nth-of-type(3) .cd-color-swatch::after {
-  background: #e05049;
+  background: #eeeeee;
 }
 .cd-colors li:nth-of-type(4) .cd-color-swatch {
-  background: #e6e6e6;
+  background: #ffffff;
 }
 .cd-colors li:nth-of-type(4) .cd-color-swatch::before {
   background: #f3f3f3;
@@ -901,7 +936,7 @@ section:nth-of-type(6) h2::before {
 /* xTypography section - basic style */
 .cd-typography h1::before {
   content: 'Aa - ';
-  color: #5f8ee4;
+  color: #111111;
 }
 
 .cd-buttons .cd-box:first-of-type {
@@ -930,28 +965,28 @@ section:nth-of-type(6) h2::before {
   margin: 1em;
 }
 .cd-icons .cd-icon-1 {
-  background-image: url("../assets/icons/icon-1.svg");
+  background-image: url("../assets/icons/arrow-down-circle.svg");
 }
 .cd-icons .cd-icon-2 {
-  background-image: url("../assets/icons/icon-2.svg");
+  background-image: url("../assets/icons/code.svg");
 }
 .cd-icons .cd-icon-3 {
-  background-image: url("../assets/icons/icon-3.svg");
+  background-image: url("../assets/icons/codepen.svg");
 }
 .cd-icons .cd-icon-4 {
-  background-image: url("../assets/icons/icon-4.svg");
+  background-image: url("../assets/icons/edit.svg");
 }
 .cd-icons .cd-icon-5 {
-  background-image: url("../assets/icons/icon-5.svg");
+  background-image: url("../assets/icons/github.svg");
 }
 .cd-icons .cd-icon-6 {
-  background-image: url("../assets/icons/icon-6.svg");
+  background-image: url("../assets/icons/linkedin.svg");
 }
 .cd-icons .cd-icon-7 {
-  background-image: url("../assets/icons/icon-7.svg");
+  background-image: url("../assets/icons/pen-tool.svg");
 }
 .cd-icons .cd-icon-8 {
-  background-image: url("../assets/icons/icon-8.svg");
+  background-image: url("../assets/icons/pluscircle.svg");
 }
 
 /* xForm section - basic style */
