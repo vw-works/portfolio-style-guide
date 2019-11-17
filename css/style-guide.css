@@ -421,7 +421,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Merriweather", serif;
+  font-family: "Open Sans", serif;
 }
 
 a {
@@ -433,7 +433,7 @@ img {
 }
 
 input, textarea, select {
-  font-family: "Merriweather", serif;
+  font-family: "Open Sans", serif;
   font-size: 1.6rem;
 }
 
